@@ -1,77 +1,77 @@
 # Speak with OpenClaw 🦞🎤
 
-> Ein echter hands-free Dialog mit deinem KI-Bot — wie ein Gespräch, nicht wie ein Formular.
+> A real hands-free conversation with your AI bot — like a phone call, not a form.
 
-Speak with OpenClaw ist eine iOS-App als Sprach-Interface für Telegram-Bots via OpenClaw. Du sprichst, die App erkennt automatisch wann du fertig bist, der Bot antwortet — Audio spielt sofort ab. Kein Tippen, kein Button halten, kein Hotword nötig.
-
----
-
-## 🎯 Der praktischste Modus: Echtes Gespräch (VAD)
-
-**Gesprächsmodus** ist der empfohlene Weg — komplett hands-free, kein Hotword, kein Button:
-
-1. Gesprächsmodus aktivieren → App kalibriert 2 Sekunden den Hintergrundlärm
-2. Einfach sprechen — die App erkennt automatisch Stimme vs. Umgebungsgeräusche
-3. Nach einer kurzen Pause: Nachricht wird gesendet, Bot antwortet
-4. Bot-Audio spielt ab → du antwortest direkt → echter Dialog
-
-Die App unterscheidet zuverlässig zwischen Sprache und Hintergrundgeräuschen (Musik, TV, Straße). Kein Button, kein Keyword, kein Aufwand.
+Speak with OpenClaw is an iOS app that acts as a voice interface for Telegram bots running on [OpenClaw](https://openclaw.ai). You talk, the app automatically detects when you're done, your bot responds — audio plays instantly. No typing, no button holding, no hotword required.
 
 ---
 
-## Was die App macht
+## 🎯 The Most Practical Mode: Real Conversation (VAD)
 
-- 🗣️ **Gesprächsmodus (VAD)** — einfach sprechen, App erkennt Anfang und Ende automatisch ← **empfohlen**
-- 🎤 **Push-to-talk** — Button halten für volle Kontrolle
-- 👂 **Hotword** — "Hey Bot" als optionale Aktivierung
-- 🔊 **Auto-Play** — Bot-Antwort spielt sofort ab, kein Tippen
-- 📱 **Hintergrund** — funktioniert auch bei gesperrtem Handy (VoIP-Modus)
-- ⚙️ **Adaptive Stille-Erkennung** — erkennt Pausen intelligent (einstellbar 1–5s)
-- 💬 **Konversations-Verlauf** — alle Nachrichten als Chat
+**Conversation mode** is the recommended way to use the app — fully hands-free, no hotword, no button:
+
+1. Activate conversation mode → app calibrates background noise for 2 seconds
+2. Just talk — the app automatically distinguishes your voice from ambient noise
+3. After a short pause: message is sent, bot responds with audio
+4. Bot audio plays → you reply → real back-and-forth dialog
+
+The app reliably separates speech from background noise (music, TV, street sounds). No button, no keyword, no friction.
 
 ---
 
-## Was du brauchst
+## What the app does
 
-Speak with OpenClaw ist eine **App-Oberfläche**. Du brauchst einen laufenden KI-Bot im Hintergrund.
+- 🗣️ **Conversation mode (VAD)** — just talk, app detects start and end automatically ← **recommended**
+- 🎤 **Push-to-talk** — hold button for full manual control
+- 👂 **Hotword** — say "Hey Bot" as optional activation
+- 🔊 **Auto-Play** — bot audio response plays immediately
+- 📱 **Background mode** — works with screen locked (VoIP mode)
+- ⚙️ **Adaptive silence detection** — intelligently detects pauses (adjustable 1–5s)
+- 💬 **Conversation history** — all messages as chat
 
-**Voraussetzungen:**
+---
+
+## What you need
+
+Speak with OpenClaw is a **voice interface**. You need a running AI bot in the background.
+
+**Requirements:**
 - iPhone (iOS 17+)
-- Mac mit macOS 14+ (läuft im Hintergrund)
-- [OpenClaw](https://openclaw.ai) — das Gateway zwischen App und KI
-- [Tailscale](https://tailscale.com) — **empfohlen** für Zugriff außerhalb des Heimnetzwerks (kostenlos)
-- Telegram-Account
-- Claude API Key (von [Anthropic](https://console.anthropic.com))
-- Google Cloud API Key — für STT (Spracherkennung) und TTS (Sprachausgabe)
+- Mac with macOS 14+
+- [OpenClaw](https://openclaw.ai) — the AI bot gateway (free, open source)
+- Telegram bot token — create one via [@BotFather](https://t.me/BotFather)
+- Claude API Key — from [console.anthropic.com](https://console.anthropic.com)
+- Google Cloud API Key — for STT (speech-to-text) + TTS (text-to-speech), enable *Cloud Speech-to-Text* and *Text-to-Speech* APIs at [console.cloud.google.com](https://console.cloud.google.com)
+- [Tailscale](https://tailscale.com) — **recommended** for access outside your home network (free)
 
 ---
 
-## Setup-Anleitung
+## Setup
 
-> **Hinweis zur Architektur:** Speak with OpenClaw kommuniziert direkt mit dem OpenClaw-Gateway auf dem Mac (Port 18800) — kein Relay-Bot mehr nötig. Die App sendet Audio direkt an den Mac-Server, der dann den KI-Bot aufruft und Audio zurückliefert. Ein früherer Ansatz mit einem Relay-Telegram-Bot ist **hinfällig** und wird nicht mehr benötigt.
+> **Architecture note:** Speak with OpenClaw communicates directly with the OpenClaw gateway on your Mac (port 18800). The app sends audio to a local relay server, which calls the AI bot and streams back text + audio.
 
-> **Empfehlung: Tailscale** — Für Zugriff außerhalb des Heimnetzwerks (z.B. unterwegs) ist [Tailscale](https://tailscale.com) die beste Lösung. Einmalig auf Mac und iPhone installieren → der Mac bekommt einen festen Hostname (z.B. `mein-mac.tailnet.ts.net`) → in der App als Server-URL eintragen → funktioniert überall, kein Port-Forwarding nötig.
+> **Recommendation: Tailscale** — for access outside your home network, [Tailscale](https://tailscale.com) is the easiest solution. Install on both Mac and iPhone → your Mac gets a fixed hostname → enter it in the app → works everywhere, no port forwarding needed.
 
-### Schritt 1: Telegram Bot erstellen
+### Step 1: Create a Telegram bot
 
-1. Öffne Telegram → schreib @BotFather
-2. `/newbot` eingeben
-3. Namen vergeben (z.B. "Mein KI-Assistent")
-4. **Bot-Token kopieren** — sieht so aus: `1234567890:AABBccDDeeFFgg...`
+1. Open Telegram → message @BotFather
+2. Type `/newbot`
+3. Give it a name
+4. **Copy the bot token** — looks like: `1234567890:AABBccDDeeFFgg...`
 
-### Schritt 2: OpenClaw installieren
+### Step 2: Install OpenClaw
 
 ```bash
-# OpenClaw installieren (Node.js 18+ vorausgesetzt)
+# Install OpenClaw (requires Node.js 18+)
 npm install -g openclaw
 
-# Initialisieren
+# Initialize
 openclaw init
 ```
 
-### Schritt 3: OpenClaw konfigurieren
+### Step 3: Configure OpenClaw
 
-Kopiere diese Beispiel-Config nach `~/.openclaw/openclaw.json` und passe sie an:
+Copy this example config to `~/.openclaw/openclaw.json` and adjust:
 
 ```json
 {
@@ -81,7 +81,7 @@ Kopiere diese Beispiel-Config nach `~/.openclaw/openclaw.json` und passe sie an:
     "bind": "loopback",
     "auth": {
       "mode": "token",
-      "token": "DEIN-EIGENER-TOKEN"
+      "token": "YOUR-OWN-TOKEN"
     }
   },
   "agents": {
@@ -92,7 +92,7 @@ Kopiere diese Beispiel-Config nach `~/.openclaw/openclaw.json` und passe sie an:
     "list": [
       {
         "id": "main",
-        "name": "Mein Bot",
+        "name": "My Bot",
         "workspaceDir": "~/openclaw-workspace"
       }
     ]
@@ -102,10 +102,10 @@ Kopiere diese Beispiel-Config nach `~/.openclaw/openclaw.json` und passe sie an:
       "streamMode": "off",
       "dmPolicy": "allowlist",
       "accounts": {
-        "meinbot": {
-          "botToken": "DEIN-BOT-TOKEN-VON-BOTFATHER",
+        "mybot": {
+          "botToken": "YOUR-BOT-TOKEN-FROM-BOTFATHER",
           "dmPolicy": "allowlist",
-          "allowFrom": ["DEINE-TELEGRAM-USER-ID"]
+          "allowFrom": ["YOUR-TELEGRAM-USER-ID"]
         }
       }
     }
@@ -120,178 +120,166 @@ Kopiere diese Beispiel-Config nach `~/.openclaw/openclaw.json` und passe sie an:
     "media": {
       "audio": {
         "enabled": true,
-        "language": "de"
+        "language": "en"
       }
     }
   }
 }
 ```
 
-**Deine Telegram User-ID herausfinden:**
-- Schreib @userinfobot auf Telegram → er antwortet mit deiner ID
+**Find your Telegram user ID:**
+- Message @userinfobot on Telegram → it replies with your ID
 
-### Schritt 4: TTS (Text-to-Speech) konfigurieren
+### Step 4: Configure TTS (Text-to-Speech)
 
-**Empfehlung: Google Cloud TTS** (beste Qualität, natürliche Stimme)
+**Recommended: Google Cloud TTS** (best quality, natural voice)
 
 ```bash
-# Google Cloud API Key holen: console.cloud.google.com
-# Text-to-Speech API aktivieren
+# Get a Google Cloud API Key at console.cloud.google.com
+# Enable the Text-to-Speech API
 
-# In openclaw.json unter env.vars eintragen:
+# Add to openclaw.json under env.vars:
 "env": {
   "vars": {
-    "GOOGLE_API_KEY": "DEIN-GOOGLE-API-KEY"
+    "GOOGLE_API_KEY": "YOUR-GOOGLE-API-KEY"
   }
 }
 ```
 
-Verfügbare deutsche Stimmen:
-- `de-DE-Chirp3-HD-Umbriel` — natürlich, warm (empfohlen)
-- `de-DE-Chirp3-HD-Iapetus` — klar, präzise
-- `de-DE-Standard-A` — einfach, kostenlos
+Available English voices:
+- `en-US-Chirp3-HD-Aoede` — natural, warm (recommended)
+- `en-US-Chirp3-HD-Charon` — clear, precise
+- `en-US-Standard-A` — simple, free tier
 
-**Alternative: ElevenLabs** (beste Qualität, kostenpflichtig)
-```json
-"tts": {
-  "provider": "elevenlabs",
-  "elevenlabs": {
-    "apiKey": "DEIN-ELEVENLABS-KEY",
-    "voiceId": "DEINE-VOICE-ID",
-    "modelId": "eleven_multilingual_v2"
-  }
-}
-```
-
-### Schritt 5: OpenClaw starten
+### Step 5: Start OpenClaw
 
 ```bash
-# Als Hintergrunddienst starten (macOS LaunchAgent)
+# Start as background service (macOS LaunchAgent)
 openclaw gateway start
 
-# Status prüfen
+# Check status
 openclaw gateway status
-# → sollte "running on port 18789" zeigen
+# → should show "running on port 18789"
 
-# Test: Telegram Bot anschreiben
-# → er sollte antworten
+# Test: message your Telegram bot
+# → it should respond
 ```
 
-### Schritt 6: App konfigurieren
+### Step 6: Configure the app
 
-1. Speak with OpenClaw App öffnen
-2. Einstellungen → Bot-Token eintragen (der von @BotFather)
-3. Telegram User-ID eintragen
-4. "Verbindung testen" → ✅ Verbunden
-5. Fertig!
-
----
-
-## Hotword anpassen
-
-Standard-Hotword ist "Hey Bot". Du kannst es ändern:
-
-- In der App: Einstellungen → Hotword-Feld
-- **Empfehlung:** "hallo", "hey bot", "hey [Name]" — kurze, klare Wörter
-- ⚠️ **"OpenClaw"** funktioniert möglicherweise **nicht** — die on-device Spracherkennung erkennt unbekannte Eigennamen oft falsch (z.B. als "open claw", "open clause" o.ä.)
-- Hotword-Sprache einstellbar: Einstellungen → Erkennungs-Sprache (Default: Deutsch)
-- Die Sprache sollte zur Sprache des Aktivierungsworts passen
-
-**Stille-Erkennung:**
-- Einstellungen → Stille-Schieberegler
-- 1 Sek = sehr schnell (für kurze Befehle)
-- 2 Sek = empfohlen
-- 5 Sek = für längere Sätze
+1. Open Speak with OpenClaw
+2. Settings → enter your bot token
+3. Enter your Telegram user ID
+4. "Test connection" → ✅ Connected
+5. Done — switch to Conversation mode and start talking
 
 ---
 
-## Mehrere Bots
+## Hotword customization
 
-Du kannst mehrere Bots in OpenClaw konfigurieren und in der App wechseln:
+Default hotword is "Hey Bot". You can change it:
+
+- In the app: Settings → Hotword field
+- **Recommendation:** short, clear words like "hello", "hey bot", "hey [name]"
+- ⚠️ **"OpenClaw"** may **not** work reliably — on-device speech recognition sometimes misrecognizes unknown brand names
+- Hotword language is adjustable: Settings → Recognition language (matches the hotword language)
+
+**Silence detection:**
+- Settings → Silence slider
+- 1s = very fast (short commands)
+- 2s = recommended
+- 5s = for longer sentences
+
+---
+
+## Multiple bots
+
+You can configure multiple bots in OpenClaw and switch between them in the app:
 
 ```json
 "accounts": {
-  "assistent": {
+  "assistant": {
     "botToken": "TOKEN-BOT-1",
-    "allowFrom": ["DEINE-ID"]
+    "allowFrom": ["YOUR-ID"]
   },
-  "kreativ": {
-    "botToken": "TOKEN-BOT-2", 
-    "allowFrom": ["DEINE-ID"]
+  "creative": {
+    "botToken": "TOKEN-BOT-2",
+    "allowFrom": ["YOUR-ID"]
   }
 }
 ```
 
-In der App: oben links → Bot auswählen.
+In the app: top left → select bot.
 
 ---
 
-## Fehlerbehebung
+## Troubleshooting
 
-**Bot antwortet nicht:**
-- OpenClaw läuft? → `openclaw gateway status`
-- Bot-Token korrekt? → Verbindungstest in der App
-- Bot bei Telegram gestartet? → `/start` schicken
+**Bot doesn't respond:**
+- Is OpenClaw running? → `openclaw gateway status`
+- Is the bot token correct? → Connection test in the app
+- Did you start the bot on Telegram? → Send `/start`
 
-**Kein Audio:**
-- TTS konfiguriert? → Google API Key gesetzt?
-- `messages.tts.auto` auf `"inbound"` gesetzt?
+**No audio:**
+- Is TTS configured? → Google API key set?
+- Is `messages.tts.auto` set to `"inbound"`?
 
-**Hotword reagiert nicht:**
-- Spracherkennung erlaubt? → iPhone Einstellungen → Datenschutz → Spracherkennung
-- On-device Erkennung verfügbar? → iOS 16+ erforderlich
+**Hotword doesn't react:**
+- Speech recognition allowed? → iPhone Settings → Privacy → Speech Recognition
+- On-device recognition available? → Requires iOS 16+
 
-**App geht im Hintergrund aus:**
-- VoIP-Modus benötigt echtes iPhone (kein Simulator)
-- Einmal ein Telefonat simulieren reicht damit iOS die App als VoIP erkennt
-
----
-
-## Datenschutz
-
-- **Hotword-Erkennung:** 100% on-device, kein Cloud-Upload
-- **Sprachaufnahmen:** gehen nur an deinen eigenen Telegram-Bot
-- **KI-Antworten:** über deine eigene API (Anthropic/OpenAI) — du kontrollierst alles
-- Keine Daten werden an den App-Entwickler gesendet
+**App stops in background:**
+- VoIP mode requires a real iPhone (not simulator)
+- Simulate one phone call to let iOS recognize the app as VoIP
 
 ---
 
-## Lizenz & Kosten
+## Privacy
 
-- **App:** 24 Stunden kostenlos testen — danach 6,99€ einmalig (App Store)
-- **OpenClaw:** kostenlos (Open Source)
-- **Claude API:** nach Verbrauch (~0.003€ pro Nachricht bei Sonnet)
-- **Google TTS:** kostenlos bis 1 Mio Zeichen/Monat
-- **Telegram:** kostenlos
+- **Hotword detection:** 100% on-device, no cloud upload
+- **Voice recordings:** go only to your own Telegram bot
+- **AI responses:** via your own API (Anthropic/OpenAI) — you control everything
+- No data is sent to the app developer
 
 ---
 
-## Entwickelt von
+## License & Cost
+
+- **App:** 24 hours free trial — then €6.99 one-time (App Store)
+- **OpenClaw:** free (open source)
+- **Claude API:** pay-per-use (~€0.003 per message with Sonnet)
+- **Google TTS/STT:** free up to 1M characters/month
+- **Telegram:** free
+
+---
+
+## Built by
 
 J.H. — built with OpenClaw
 
-*Fragen, Bugs, Feature-Requests: GitHub Issues*
+*Questions, bugs, feature requests: GitHub Issues*
 
 ---
 
-## App Store Beschreibung (Entwurf)
+## App Store Description (Draft)
 
-**Speak with OpenClaw — Voice Interface für KI-Bots**
+**Speak with OpenClaw — Voice Interface for AI Bots**
 
-Sprich mit deinen KI-Bots auf Telegram — freihändig, wie mit Siri.
+Talk to your AI bots on Telegram — hands-free, like a real conversation.
 
-Speak with OpenClaw verbindet dein iPhone mit deinem eigenen KI-Assistenten. Push-to-talk oder Hotword-Erkennung — du sprichst, die KI antwortet mit Audio. Komplett in deiner Kontrolle: deine API, dein Bot, deine Daten.
+Speak with OpenClaw connects your iPhone to your own AI assistant running on your Mac. Just talk — the app automatically detects your voice, sends when you pause, and plays the bot's audio response. Real back-and-forth dialog, no button, no keyword, no friction.
 
 **Features:**
-• Hotword-Erkennung ("Hey Bot") — hands-free
-• Automatische Stille-Erkennung — kein Button nötig
-• Audio-Antworten spielen sofort ab
-• Hintergrund-Betrieb bei gesperrtem Handy
-• Mehrere Bots wählbar
-• On-device Spracherkennung — kein Cloud-Upload
+• Conversation mode (VAD) — just talk, fully hands-free
+• Hotword detection ("Hey Bot") — optional activation
+• Automatic silence detection — no button needed
+• Audio responses play instantly
+• Background mode with screen locked
+• Multiple bots selectable
+• On-device speech recognition — no cloud upload
 
-**Voraussetzung:** OpenClaw auf dem Mac (kostenlos, Anleitung auf GitHub)
+**Requirement:** OpenClaw on your Mac (free, open source, setup guide on GitHub)
 
-**24 Stunden kostenlos testen — danach 6,99€ einmalig.**
+**24 hours free — then €6.99 one-time.**
 
-*Datenschutz: Keine Daten werden an den Entwickler gesendet. Alles läuft über deine eigene Infrastruktur.*
+*Privacy: No data is sent to the developer. Everything runs on your own infrastructure.*
