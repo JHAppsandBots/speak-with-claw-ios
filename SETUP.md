@@ -1,4 +1,4 @@
-# Setup Guide — Speak with OpenClaw
+# Setup Guide — Speak with Claw
 
 This guide walks you through everything you need to use the app.
 
@@ -45,7 +45,7 @@ Install [Tailscale](https://tailscale.com) on both your Mac and iPhone — you'l
 
 ## Step 4: Configure the app
 
-Open **Speak with OpenClaw** on your iPhone:
+Open **Speak with Claw** on your iPhone:
 
 1. Tap the **Settings** icon
 2. Enter your Server URL: `http://YOUR_MAC_IP:18800`

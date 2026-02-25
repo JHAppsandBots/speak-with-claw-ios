@@ -1,10 +1,10 @@
-# Privacy Policy — Speak with OpenClaw
+# Privacy Policy — Speak with Claw
 
 **Last updated:** February 23, 2026
 
 ## Summary
 
-Speak with OpenClaw does not collect, store, or share any personal data. All communication happens directly between your iPhone and your own server.
+Speak with Claw does not collect, store, or share any personal data. All communication happens directly between your iPhone and your own server.
 
 ---
 

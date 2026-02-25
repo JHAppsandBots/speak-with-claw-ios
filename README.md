@@ -1,8 +1,8 @@
-# Speak with OpenClaw 🦞🎤
+# Speak with Claw 🦞🎤
 
 > A real hands-free conversation with your AI bot — like a phone call, not a form.
 
-Speak with OpenClaw is an iOS app that acts as a voice interface for Telegram bots running on [OpenClaw](https://openclaw.ai). You talk, the app automatically detects when you're done, your bot responds — audio plays instantly. No typing, no button holding, no hotword required.
+Speak with Claw is an iOS app that acts as a voice interface for Telegram bots running on [OpenClaw](https://openclaw.ai). You talk, the app automatically detects when you're done, your bot responds — audio plays instantly. No typing, no button holding, no hotword required.
 
 ---
 
@@ -37,7 +37,7 @@ The app reliably separates speech from background noise (music, TV, street sound
 
 ## What you need
 
-Speak with OpenClaw is a **voice interface**. You need a running AI bot in the background.
+Speak with Claw is a **voice interface**. You need a running AI bot in the background.
 
 **Requirements:**
 - iPhone (iOS 17+)
@@ -52,7 +52,7 @@ Speak with OpenClaw is a **voice interface**. You need a running AI bot in the b
 
 ## Setup
 
-> **Architecture note:** Speak with OpenClaw communicates directly with the OpenClaw gateway on your Mac (port 18800). The app sends audio to a local relay server, which calls the AI bot and streams back text + audio.
+> **Architecture note:** Speak with Claw communicates directly with the OpenClaw gateway on your Mac (port 18800). The app sends audio to a local relay server, which calls the AI bot and streams back text + audio.
 
 > **Recommendation: Tailscale** — for access outside your home network, [Tailscale](https://tailscale.com) is the easiest solution. Install on both Mac and iPhone → your Mac gets a fixed hostname → enter it in the app → works everywhere, no port forwarding needed.
 
@@ -171,7 +171,7 @@ openclaw gateway status
 
 ### Step 6: Configure the app
 
-1. Open Speak with OpenClaw
+1. Open Speak with Claw
 2. Settings → enter your bot token
 3. Enter your Telegram user ID
 4. "Test connection" → ✅ Connected
@@ -267,11 +267,11 @@ J.H. — built with OpenClaw
 
 ## App Store Description (Draft)
 
-**Speak with OpenClaw — Voice Interface for AI Bots**
+**Speak with Claw — Voice Interface for AI Bots**
 
 Talk to your AI bots on Telegram — hands-free, like a real conversation.
 
-Speak with OpenClaw connects your iPhone to your own AI assistant running on your Mac. Just talk — the app automatically detects your voice, sends when you pause, and plays the bot's audio response. Real back-and-forth dialog, no button, no keyword, no friction.
+Speak with Claw connects your iPhone to your own AI assistant running on your Mac. Just talk — the app automatically detects your voice, sends when you pause, and plays the bot's audio response. Real back-and-forth dialog, no button, no keyword, no friction.
 
 **Features:**
 • Conversation mode (VAD) — just talk, fully hands-free

@@ -1,0 +1,44 @@
+default_platform(:ios)
+
+platform :ios do
+
+  desc "Upload metadata only to App Store Connect"
+  lane :upload_metadata do
+    api_key = app_store_connect_api_key(
+      key_id: "MF465S89A3",
+      issuer_id: "6b3c7a6c-b1e8-41f7-b879-1f69545dbd36",
+      key_filepath: File.expand_path("~/.appstoreconnect/private_keys/AuthKey_MF465S89A3.p8")
+    )
+
+    deliver(
+      api_key: api_key,
+      skip_binary_upload: true,
+      skip_screenshots: true,
+      force: true,
+      submit_for_review: false,
+      run_precheck_before_submit: false,
+      ignore_language_directory_validation: true
+    )
+  end
+
+  desc "Upload screenshots only"
+  lane :upload_screenshots do
+    api_key = app_store_connect_api_key(
+      key_id: "MF465S89A3",
+      issuer_id: "6b3c7a6c-b1e8-41f7-b879-1f69545dbd36",
+      key_filepath: File.expand_path("~/.appstoreconnect/private_keys/AuthKey_MF465S89A3.p8")
+    )
+
+    deliver(
+      api_key: api_key,
+      skip_binary_upload: true,
+      skip_metadata: true,
+      overwrite_screenshots: true,
+      force: true,
+      submit_for_review: false,
+      run_precheck_before_submit: false,
+      ignore_language_directory_validation: true
+    )
+  end
+
+end

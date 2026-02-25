@@ -1,4 +1,4 @@
-# Contributing to Speak with OpenClaw iOS
+# Contributing to Speak with Claw iOS
 
 Thanks for your interest! This is a personal project, but contributions are welcome.
 

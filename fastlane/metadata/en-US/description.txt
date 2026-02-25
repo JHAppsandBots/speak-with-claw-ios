@@ -1,0 +1,18 @@
+Speak with OpenClaw turns your iPhone into a voice interface for your AI bots running on OpenClaw — fully hands-free, no button holding, no hotword required.
+
+Just talk. The app automatically detects when you start and stop speaking, sends your voice to your relay server, and your bot responds with audio. Real back-and-forth conversation, like a phone call.
+
+Features:
+• Hands-free VAD mode — automatic speech detection
+• Multi-bot support — switch between different bots
+• Chat history per bot
+• 100% private — connects only to your own server, no cloud, no tracking
+
+Requirements:
+• iPhone with iOS 17+
+• Mac running OpenClaw with voice relay server
+• Local network or Tailscale connection
+
+This app is free and open source (MIT). 
+
+Note: This is an early-stage release. Core features work well, but some functions are still rough around the edges or not yet fully implemented. Feedback and contributions welcome on GitHub.

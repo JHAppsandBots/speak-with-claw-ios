@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<string>de</string>
 	<key>CFBundleDisplayName</key>
-	<string>Speak with OpenClaw</string>
+	<string>Speak with Claw</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -26,9 +26,9 @@
 		<true/>
 	</dict>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>BotVoice braucht das Mikrofon um deine Sprachnachrichten aufzunehmen und an deinen Telegram-Bot zu schicken.</string>
+	<string>Speak with Claw benötigt das Mikrofon, um deine Sprachnachrichten aufzunehmen und an deinen KI-Bot zu senden.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>BotVoice nutzt Spracherkennung um auf dein Hotword zu reagieren.</string>
+	<string>Speak with Claw nutzt die Spracherkennung, um auf dein eingestelltes Aktivierungswort zu reagieren.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>

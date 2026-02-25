@@ -1,16 +1,16 @@
-# Speak with OpenClaw — Setup-Anleitung (Allgemein)
+# Speak with Claw — Setup-Anleitung (Allgemein)
 
 **Version:** 1.0  
 **Erstellt:** 2026-02-20  
 **Aktualisiert:** 2026-02-20  
-**Zweck:** Allgemeiner Setup-Leitfaden für die "Speak with OpenClaw" iOS App (ohne persönliche Credentials)  
+**Zweck:** Allgemeiner Setup-Leitfaden für die "Speak with Claw" iOS App (ohne persönliche Credentials)  
 **Owner:** Tony 🔧
 
 ---
 
 ## ⚠️ Was ist das?
 
-Diese Anleitung beschreibt das **generische Setup** für die "Speak with OpenClaw" iOS App. Sie enthält:
+Diese Anleitung beschreibt das **generische Setup** für die "Speak with Claw" iOS App. Sie enthält:
 - Systemvoraussetzungen
 - Installationsschritte ohne persönliche Werte
 - Platzhalter für API-Keys, Tokens, IPs
@@ -199,7 +199,7 @@ Telegram-Bots sehen ihre **eigenen Nachrichten nicht**. Wenn die App direkt mit 
 ```python
 #!/usr/local/bin/python3
 """
-Voice Relay Server — Speak with OpenClaw iOS App Backend
+Voice Relay Server — Speak with Claw iOS App Backend
 """
 
 import os
@@ -756,7 +756,7 @@ Aktivierungswort (wie "Hey Siri") → App hört im Hintergrund → bei Erkennung
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ iPhone App (Speak with OpenClaw)                                   │
+│ iPhone App (Speak with Claw)                                   │
 │ - Push-to-talk ODER Hotword-Aktivierung                     │
 │ - Aufnahme als M4A                                           │
 │ - HTTP POST /voice                                           │
