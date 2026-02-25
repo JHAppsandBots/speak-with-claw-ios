@@ -277,13 +277,11 @@ Speak with Claw connects your iPhone to your own AI assistant running on your Ma
 • Conversation mode (VAD) — just talk, fully hands-free
 • Hotword detection ("Hey Bot") — optional activation
 • Automatic silence detection — no button needed
-• Audio responses play instantly
+• Audio responses play after process
 • Background mode with screen locked
 • Multiple bots selectable
 • On-device speech recognition — no cloud upload
 
 **Requirement:** OpenClaw on your Mac (free, open source, setup guide on GitHub)
-
-**24 hours free — then €6.99 one-time.**
 
 *Privacy: No data is sent to the developer. Everything runs on your own infrastructure.*
