@@ -24,13 +24,17 @@ All data (voice, text) is sent exclusively to the server URL you configure in th
 
 Chat history is stored locally on your device using Apple's UserDefaults. It never leaves your device except when you explicitly send a message to your server.
 
+## Speech Recognition (Apple)
+
+If you enable the hotword feature, the app uses Apple's built-in Speech Recognition (`SFSpeechRecognizer`). This means audio data is sent to Apple's servers for processing. This is governed by [Apple's Privacy Policy](https://www.apple.com/privacy/). You can disable hotword detection at any time in the app settings.
+
 ## Third-Party Services
 
-The app does not use any third-party analytics, advertising, or tracking services.
+The app does not use any third-party analytics, advertising, or tracking services. The only external service used is Apple's Speech Recognition framework (optional, for hotword detection).
 
 ## Contact
 
-Questions? Open an issue: https://github.com/JHAppsandBots/speak-with-openclaw-ios/issues
+If you have questions: https://github.com/JHAppsandBots/speak-with-openclaw-ios
 
 ---
 
