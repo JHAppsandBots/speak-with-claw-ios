@@ -1,4 +1,4 @@
-Speak with OpenClaw turns your iPhone into a voice interface for your AI bots running on OpenClaw — fully hands-free, no button holding, no hotword required.
+Speak with Claw turns your iPhone into a voice interface for your AI bots running on your own Mac — fully hands-free, no button holding, no hotword required.
 
 Just talk. The app automatically detects when you start and stop speaking, sends your voice to your relay server, and your bot responds with audio. Real back-and-forth conversation, like a phone call.
 
