@@ -4,7 +4,7 @@
 
 Speak with Claw is an iOS app that acts as a voice interface for Telegram bots running on [OpenClaw](https://openclaw.ai). You talk, the app automatically detects when you're done, and your bot responds with audio. No typing, no button holding, no hotword required.
 
-> ⚠️ **Response latency:** Replies are not instant — expect 3–10 seconds depending on your LLM and network. This is not a Siri replacement. It's a real back-and-forth with your own AI bot, running on your own server.
+> ⚠️ **Response latency:** Replies are not instant — There is latency — response time depends on your LLM and network.
 
 ---
 
@@ -21,7 +21,7 @@ Speak with Claw is an iOS app that acts as a voice interface for Telegram bots r
 3. After a short pause: message is sent, bot processes and responds with audio
 4. Audio plays → you reply → back-and-forth dialog
 
-The app reliably separates speech from background noise (music, TV, street sounds). No button, no keyword, no friction. Expect a few seconds of latency per response — the bot needs to process your input and generate a reply.
+The app reliably separates speech from background noise (music, TV, street sounds). No button, no keyword, no friction. There is latency — response time depends on your LLM.
 
 ---
 
@@ -251,7 +251,7 @@ In the app: top left → select bot.
 
 ## License & Cost
 
-- **App:** 24 hours free trial — then €6.99 one-time (App Store)
+- **App:** Free (open source)
 - **OpenClaw:** free (open source)
 - **LLM API:** pay-per-use (e.g. ~€0.003 per message with Claude Sonnet)
 - **Google TTS/STT:** free up to 1M characters/month
@@ -275,7 +275,7 @@ Talk to your AI bots on Telegram — hands-free, by voice.
 
 Speak with Claw connects your iPhone to your own AI bot running on your Mac. Just talk — the app detects your voice automatically, sends when you pause, and plays the bot's audio response.
 
-Note: Responses are not instant. Expect a few seconds of latency per reply, depending on your bot and LLM setup.
+Note: Responses are not instant. There is latency — response time depends on your bot and LLM setup.
 
 **Features:**
 • Conversation mode (VAD) — just talk, fully hands-free

@@ -9,7 +9,7 @@
 
 Speak with Claw is an iOS app that gives you a voice interface for your Telegram bots running on [OpenClaw](https://openclaw.ai). You speak — your bot listens and responds with audio.
 
-> ⚠️ **Latency:** Responses are not instant. Expect 3–10 seconds per reply depending on your LLM and network. This is not a Siri replacement — it's a real conversation with your own self-hosted AI bot.
+> ⚠️ **Latency:** Responses are not instant. There is latency — response time depends on your LLM and network.
 
 ---
 
@@ -168,7 +168,7 @@ curl http://<your-tailscale-ip>:18800/health
 - Firewall blocking Python? → Allow in macOS System Settings → Firewall
 
 **Responses are slow:**
-- This is expected. LLM processing + TTS takes 3–10 seconds.
+- This is expected — response time depends on your LLM and TTS setup.
 - Faster models (e.g. GPT-4o-mini) reduce latency.
 
 ---

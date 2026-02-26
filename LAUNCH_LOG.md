@@ -22,7 +22,7 @@
 - Build uploaded
 - Metadata uploaded (name, subtitle, description, keywords, URLs)
 - Screenshots uploaded (1290x2796, iPhone 6.7")
-- Price: Free (24h trial, then €6.99 one-time)
+- Price: Free (open source)
 - Privacy URL: https://jhappsandbots.github.io/speak-with-openclaw-ios/privacy
 - Support URL: https://github.com/JHAppsandBots/speak-with-claw-ios
 - Submitted for review: 2026-02-23

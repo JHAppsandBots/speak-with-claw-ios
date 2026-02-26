@@ -1,6 +1,6 @@
 Speak with Claw turns your iPhone into a voice interface for your AI bot. Just talk. No button, no hotword. The app detects when you stop speaking, sends your voice to your own server, and plays the response back.
 
-Note: Responses are not instant — expect a few seconds per reply depending on your LLM and server setup.
+Note: There is latency — response time depends on your LLM and server setup.
 
 Features:
 - Hands-free conversation mode (VAD)
